@@ -1,0 +1,13 @@
+.header{
+  display:flex;
+  justify-content:space-between;
+  padding:0.5em;
+  border-bottom:0.2em solid black;
+
+}
+
+#ppImg{
+  width:5em;
+  height:auto;
+  border-radius:50%;
+}
