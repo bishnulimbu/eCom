@@ -1,0 +1,12 @@
+.admin-header{
+  display:flex;
+  min-height:100vh;
+}
+.admin-sidebar{
+  max-width:10px;
+  flex-direction:column;
+}
+
+.admin-main{
+  flex:1;
+}
