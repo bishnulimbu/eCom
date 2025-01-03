@@ -16,7 +16,8 @@ a:hover{
   display:flex;
   justify-content:left;
   border-right:2px solid black;
-  width:20%;
+  background-color:#dfe0e1;
+ min-height: calc(100vh - 60px);
 
 }
 li{

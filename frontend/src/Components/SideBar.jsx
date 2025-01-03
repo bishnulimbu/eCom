@@ -4,8 +4,8 @@ import './SideBar.css'
 
 const SideBar = () => {
   const links = [
-    { lName: "Dashboard", address: "/view" },
-    { lName: "View Products", address: "/add" },
+    { lName: "Dashboard", address: "/DashBoard" },
+    { lName: "View Products", address: "/product" },
     { lName: "User Details", address: "/user" },
   ];
   return (
