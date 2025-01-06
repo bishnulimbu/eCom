@@ -1,0 +1,22 @@
+.mainForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mainForm label {
+  margin-bottom: 8px;
+}
+
+.mainForm input {
+  margin-bottom: 16px;
+  padding: 10px;
+}
+
+.mainForm button {
+  font-size: 1.2em;
+}

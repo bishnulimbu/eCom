@@ -1,12 +1,9 @@
-.admin-header{
-  display:flex;
-  min-height:100vh;
-}
-.admin-sidebar{
-  max-width:10px;
-  flex-direction:column;
+.admin-sidebar {
+  display: grid;
+  grid-template-columns: 0.5fr 3fr;
+  min-height: 100vh;
 }
 
-.admin-main{
-  flex:1;
+.admin-content {
+  padding: 1em;
 }
