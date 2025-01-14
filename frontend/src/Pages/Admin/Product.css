@@ -1,10 +1,21 @@
-.mainCard {
-  display: flex;
+table{
+  width:100%;
+  /*min-width:100vw;*/
+}
+th{
+  padding:0.8em;
+}
+td{
+  padding-left:1em;
+  padding-top:0.5em;
+  padding-bottom:0.5em;
 }
 
-.productCard {
-  border: 1px solid black;
-  padding: 1em;
-  margin: 1em;
-  background-color: #b7c6d4;
+.btn1{
+  display:flex;
+  justify-content:space-around;
 }
+button{
+  padding:0.8em;
+}
+
