@@ -1,3 +1,8 @@
+import pic from '../../assets/guyPic.jpg'
+import './DashBoard.css'
 
-const Dashboard = () => <h2>Welcome to the Dashboard</h2>;
+const Dashboard = () => <div className="pic">
+  <img src={pic} alt="Guy Picture"/>
+</div>
+
 export default Dashboard;
