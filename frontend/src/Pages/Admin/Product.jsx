@@ -1,8 +1,10 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import './Product.css';
+import {useNavigate} from 'react-router-dom';
 
 const Product = () => {
+  const navigate= useNavigate();
   const [pData, setPdata] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -31,13 +33,14 @@ const Product = () => {
       setPdata(pData.filter(product=>product._id!== id));
     }catch(e){
       console.error("error: ",e.message);
+      setResult("Failed to delete the product.");
     }
   }
   useEffect(()=>{
     if(result){
-    const timer = setTimeout(()=>{
+      const timer = setTimeout(()=>{
         setResult('');
-    },3000)
+      },3000)
       return()=>clearTimeout(timer);
     }
   },[result])
@@ -49,6 +52,9 @@ const Product = () => {
   if (error) {
     return <h1>{error}</h1>
   }
+  const handleEditClick=(id)=>{
+    navigate(`/editProduct/${id}`)
+  }
 
   return (
     <>
@@ -59,7 +65,7 @@ const Product = () => {
               <th>Product names</th>
               <th>Category</th>
               <th>Price</th>
-              <th>Quanity</th>
+              <th>Quantity</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -70,8 +76,8 @@ const Product = () => {
               <td>Nrs.{product.price}</td>
               <td>{product.quantity}</td>
               <td className="btn1">
-                  <button type="">Edit</button>
-                  <button type="button" onClick={()=>deleteFn(product._id)}>Delete</button>
+                <button type="button" onClick={()=>handleEditClick(product._id)}>Edit</button>
+                <button type="button" onClick={()=>deleteFn(product._id)}>Delete</button>
               </td>
             </tr>
             )) : (<h1>no product to displayed</h1>)}
